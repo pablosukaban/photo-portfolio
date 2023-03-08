@@ -2,7 +2,11 @@
 module.exports = {
     content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     theme: {
-        extend: {},
+        extend: {
+            backgroundImage: {
+                hero: 'url(https://wallpapercave.com/wp/wp6415210.jpg)',
+            },
+        },
     },
     plugins: [],
 };
