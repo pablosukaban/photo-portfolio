@@ -1,0 +1,21 @@
+.wrapper {
+}
+
+.container {
+    display: grid;
+    grid-template-columns: auto auto;
+
+    max-width: 1450px;
+    min-height: 80px;
+    margin: 0 auto;
+}
+
+.flex-item {
+    display: flex;
+    align-items: center;
+}
+
+.list {
+    display: flex;
+    gap: 10px;
+}
