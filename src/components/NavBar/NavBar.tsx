@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import { List, X } from 'phosphor-react';
 
 const LINKS = ['music', 'sfx', 'color', 'vfx', 'log in', 'join'];
 
@@ -22,19 +23,19 @@ export const NavBar = () => {
     }, [isHidden]);
 
     return (
-        <div className='sticky top-0 transition-all' ref={navRef}>
+        <div className='sticky top-0  text-white transition-all' ref={navRef}>
             <div className='mx-auto max-w-[1450px]'>
                 <div className='relative flex min-h-[80px] justify-center p-6 lg:justify-between'>
                     <div
-                        className={`absolute top-6 left-6 block cursor-pointer lg:hidden ${
+                        className={`absolute top-6 left-6 block cursor-pointer  lg:hidden ${
                             isHidden ? 'block' : 'hidden'
                         }`}
                         onClick={() => setIsHidden(false)}
                     >
-                        X
+                        <List size={24} />
                     </div>
                     <div
-                        className={`absolute left-0 top-5 h-screen w-4/5 bg-white p-6 ${
+                        className={`absolute left-0 top-0 h-screen w-4/5 bg-white p-6 ${
                             isHidden ? 'hidden' : 'block'
                         }`}
                     >
@@ -49,10 +50,10 @@ export const NavBar = () => {
                             ))}
                         </ul>
                         <div
-                            className='absolute right-2 top-2 cursor-pointer'
+                            className='absolute right-2 top-2 cursor-pointer text-black'
                             onClick={() => setIsHidden(true)}
                         >
-                            X
+                            <X size={24} />
                         </div>
                     </div>
                     <div className='flex items-center'>
@@ -61,6 +62,7 @@ export const NavBar = () => {
                         </div>
                     </div>
                     <div className='hidden items-center lg:flex'>
+                        {/* на компах */}
                         <ul className='flex justify-center gap-2'>
                             {LINKS.map((link, index) => (
                                 <li
