@@ -1,10 +1,10 @@
 import React from 'react';
-import { NavBar } from './components/NavBar/NavBar';
+import { Hero } from './components/Hero/Hero';
 
 const App = () => {
     return (
-        <div className='min-h-[200vh] bg-black'>
-            <NavBar />
+        <div className='h-[300vh] text-white'>
+            <Hero />
         </div>
     );
 };
